@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QUAD – FLAMES App UI Reference</title>
+  <meta name="description" content="High-fidelity HTML/CSS mockup of the QUAD dating app — Landing and Onboarding screens. Visual reference for React Native developers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     LANDING SCREEN
+     ============================================================ -->
+<div class="phone-wrapper landing-phone" id="screen-landing">
+  <div class="phone-label">Landing Screen</div>
+  <div class="phone-frame">
+
+    <!-- Hero – placeholder background active until real image/video is provided -->
+    <div class="landing-hero">
+      <img src="assets/landing-hero.jpg" alt="Students on campus" onerror="this.style.display='none'" />
+      <div class="landing-hero-overlay"></div>
+    </div>
+
+    <div class="landing-frame-content">
+      <div class="status-bar dark">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery"><div class="battery-fill"></div></div>
+        </div>
+      </div>
+
+      <!-- QUAD Logo -->
+      <div class="landing-logo">
+        <span class="landing-logo-text">QUAD</span>
+        <span class="landing-logo-dot"></span>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="landing-body">
+        <h1 class="landing-headline">Meet people who<br/>share your campus.</h1>
+        <p class="landing-subtext">Real students. Real connections.<br/>Verified .edu only.</p>
+
+        <div class="landing-actions">
+          <!-- .edu email button -->
+          <button class="btn-landing-edu" id="btn-edu-email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            Continue with .edu email
+          </button>
+
+          <!-- Google button -->
+          <button class="btn-landing-google" id="btn-google">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.29-8.16 2.29-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+            Continue with Google
+          </button>
+        </div>
+
+        <div class="landing-login-row">
+          <span>Already a student?</span>
+          <a href="#" id="link-login">Log in</a>
+        </div>
+      </div>
+
+      <!-- Footer verification -->
+      <div class="landing-footer">
+        <svg class="landing-footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+        <span>Verified .edu email &middot; 500+ universities</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     ONBOARDING 01 – What should people call you?
+     Continue: enabled when input has value
+     ============================================================ -->
+<div class="phone-wrapper" id="screen-onboarding-01">
+  <div class="phone-label">Onboarding 01 – Name</div>
+  <div class="phone-frame">
+    <div class="status-bar light">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="battery"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+    <div class="screen-content">
+      <div class="onboarding-header">
+        <button class="btn-back" id="ob01-back" aria-label="Go back">&#8249;</button>
+      </div>
+      <h1 class="screen-title">What should<br/>people call you?</h1>
+      <div class="mt-28">
+        <input
+          class="input-underline"
+          type="text"
+          id="input-firstname"
+          placeholder="First name"
+          value="Thanmaie"
+          autocomplete="given-name"
+          oninput="toggleContinue('ob01-continue', this.value.trim().length > 0)"
+        />
+      </div>
+      <div class="mt-auto"></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="btn-primary" id="ob01-continue">Continue</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     ONBOARDING 02 – How old are you?
+     Continue: always enabled (age preset to 21)
+     ============================================================ -->
+<div class="phone-wrapper" id="screen-onboarding-02">
+  <div class="phone-label">Onboarding 02 – Age</div>
+  <div class="phone-frame">
+    <div class="status-bar light">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="battery"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+    <div class="screen-content">
+      <div class="onboarding-header">
+        <button class="btn-back" id="ob02-back" aria-label="Go back">&#8249;</button>
+        <span class="onboarding-header-right progress-text">2 / 9</span>
+      </div>
+      <h1 class="screen-title">How old<br/>are you?</h1>
+      <div class="age-selector-row">
+        <button class="btn-circle minus" id="btn-age-minus" aria-label="Decrease age">&#8722;</button>
+        <div class="age-display" id="age-display" aria-live="polite">21</div>
+        <button class="btn-circle plus" id="btn-age-plus" aria-label="Increase age">+</button>
+      </div>
+      <p class="age-min-label">Minimum age: 18</p>
+      <div class="mt-auto"></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="btn-primary" id="ob02-continue">Continue</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     ONBOARDING 03 – What best describes you? (Gender)
+     Continue: enabled after card selection
+     ============================================================ -->
+<div class="phone-wrapper" id="screen-onboarding-03">
+  <div class="phone-label">Onboarding 03 – Gender</div>
+  <div class="phone-frame">
+    <div class="status-bar light">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="battery"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+    <div class="screen-content">
+      <div class="onboarding-header">
+        <button class="btn-back" id="ob03-back" aria-label="Go back">&#8249;</button>
+        <span class="onboarding-header-right progress-text">3 / 9</span>
+      </div>
+      <h1 class="screen-title">What best<br/>describes you?</h1>
+      <div class="cards-list mt-24" role="group" aria-label="Gender options">
+        <button class="option-card" id="gender-man" aria-pressed="false" onclick="selectOption(this,'gender','ob03-continue')">
+          <div class="option-card-text"><div class="option-card-title">Man</div></div>
+        </button>
+        <button class="option-card" id="gender-woman" aria-pressed="false" onclick="selectOption(this,'gender','ob03-continue')">
+          <div class="option-card-text"><div class="option-card-title">Woman</div></div>
+        </button>
+        <button class="option-card" id="gender-nonbinary" aria-pressed="false" onclick="selectOption(this,'gender','ob03-continue')">
+          <div class="option-card-text"><div class="option-card-title">Non-binary</div></div>
+        </button>
+        <button class="option-card" id="gender-pnts" aria-pressed="false" onclick="selectOption(this,'gender','ob03-continue')">
+          <div class="option-card-text"><div class="option-card-title">Prefer not to say</div></div>
+        </button>
+      </div>
+      <div class="mt-auto"></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="btn-primary disabled" id="ob03-continue" disabled>Continue</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     ONBOARDING 04 – Who are you interested in?
+     Continue: enabled after card selection
+     ============================================================ -->
+<div class="phone-wrapper" id="screen-onboarding-04">
+  <div class="phone-label">Onboarding 04 – Interest</div>
+  <div class="phone-frame">
+    <div class="status-bar light">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="battery"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+    <div class="screen-content">
+      <div class="onboarding-header">
+        <button class="btn-back" id="ob04-back" aria-label="Go back">&#8249;</button>
+        <span class="onboarding-header-right progress-text">4 / 9</span>
+      </div>
+      <h1 class="screen-title">Who are you<br/>interested in?</h1>
+      <div class="cards-list mt-24" role="group" aria-label="Interest options">
+        <button class="option-card" id="interest-men" aria-pressed="false" onclick="selectOption(this,'interest','ob04-continue')">
+          <div class="option-card-text"><div class="option-card-title">Men</div></div>
+        </button>
+        <button class="option-card" id="interest-women" aria-pressed="false" onclick="selectOption(this,'interest','ob04-continue')">
+          <div class="option-card-text"><div class="option-card-title">Women</div></div>
+        </button>
+        <button class="option-card" id="interest-everyone" aria-pressed="false" onclick="selectOption(this,'interest','ob04-continue')">
+          <div class="option-card-text"><div class="option-card-title">Everyone</div></div>
+        </button>
+        <button class="option-card" id="interest-pnts" aria-pressed="false" onclick="selectOption(this,'interest','ob04-continue')">
+          <div class="option-card-text"><div class="option-card-title">Prefer not to say</div></div>
+        </button>
+      </div>
+      <div class="mt-auto"></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="btn-primary disabled" id="ob04-continue" disabled>Continue</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     ONBOARDING 05 – Relationship Intent
+     Continue: enabled after card selection
+     ============================================================ -->
+<div class="phone-wrapper" id="screen-onboarding-05">
+  <div class="phone-label">Onboarding 05 – Relationship Intent</div>
+  <div class="phone-frame">
+    <div class="status-bar light">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="battery"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+    <div class="screen-content">
+      <div class="onboarding-header">
+        <button class="btn-back" id="ob05-back" aria-label="Go back">&#8249;</button>
+        <span class="onboarding-header-right progress-text">5 / 9</span>
+      </div>
+      <h1 class="screen-title">What are you<br/>looking for?</h1>
+      <div class="cards-list mt-24" role="group" aria-label="Relationship intent options">
+        <button class="option-card" id="intent-relationship" aria-pressed="false" onclick="selectOption(this,'intent','ob05-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Long-term relationship</div>
+            <div class="option-card-desc">Looking for something serious and committed</div>
+          </div>
+        </button>
+        <button class="option-card" id="intent-casual" aria-pressed="false" onclick="selectOption(this,'intent','ob05-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Casual dating</div>
+            <div class="option-card-desc">Keeping it light and seeing where things go</div>
+          </div>
+        </button>
+        <button class="option-card" id="intent-friends" aria-pressed="false" onclick="selectOption(this,'intent','ob05-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Friends first</div>
+            <div class="option-card-desc">Getting to know people on campus</div>
+          </div>
+        </button>
+        <button class="option-card" id="intent-open" aria-pressed="false" onclick="selectOption(this,'intent','ob05-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Open to anything</div>
+            <div class="option-card-desc">Not sure yet, just exploring</div>
+          </div>
+        </button>
+      </div>
+      <div class="mt-auto"></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="btn-primary disabled" id="ob05-continue" disabled>Continue</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     ONBOARDING 06 – Monogamy Preference
+     Continue: enabled after card selection
+     ============================================================ -->
+<div class="phone-wrapper" id="screen-onboarding-06">
+  <div class="phone-label">Onboarding 06 – Monogamy</div>
+  <div class="phone-frame">
+    <div class="status-bar light">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="battery"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+    <div class="screen-content">
+      <div class="onboarding-header">
+        <button class="btn-back" id="ob06-back" aria-label="Go back">&#8249;</button>
+        <span class="onboarding-header-right progress-text">6 / 9</span>
+      </div>
+      <h1 class="screen-title">What's your<br/>relationship style?</h1>
+      <div class="cards-list mt-24" role="group" aria-label="Monogamy options">
+        <button class="option-card" id="mono-monogamous" aria-pressed="false" onclick="selectOption(this,'mono','ob06-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Monogamous</div>
+            <div class="option-card-desc">One partner at a time</div>
+          </div>
+        </button>
+        <button class="option-card" id="mono-open" aria-pressed="false" onclick="selectOption(this,'mono','ob06-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Open relationship</div>
+            <div class="option-card-desc">Open to multiple connections</div>
+          </div>
+        </button>
+        <button class="option-card" id="mono-poly" aria-pressed="false" onclick="selectOption(this,'mono','ob06-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Polyamorous</div>
+            <div class="option-card-desc">Multiple meaningful relationships</div>
+          </div>
+        </button>
+        <button class="option-card" id="mono-flexible" aria-pressed="false" onclick="selectOption(this,'mono','ob06-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Flexible</div>
+            <div class="option-card-desc">Depends on the connection</div>
+          </div>
+        </button>
+        <button class="option-card" id="mono-pnts" aria-pressed="false" onclick="selectOption(this,'mono','ob06-continue')">
+          <div class="option-card-text"><div class="option-card-title">Prefer not to say</div></div>
+        </button>
+      </div>
+      <div class="mt-auto"></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="btn-primary disabled" id="ob06-continue" disabled>Continue</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     ONBOARDING 07 – Occupation
+     Continue: enabled after card selection
+     ============================================================ -->
+<div class="phone-wrapper" id="screen-onboarding-07">
+  <div class="phone-label">Onboarding 07 – Occupation</div>
+  <div class="phone-frame">
+    <div class="status-bar light">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="battery"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+    <div class="screen-content">
+      <div class="onboarding-header">
+        <button class="btn-back" id="ob07-back" aria-label="Go back">&#8249;</button>
+        <span class="onboarding-header-right progress-text">7 / 9</span>
+      </div>
+      <h1 class="screen-title">What's your<br/>occupation?</h1>
+      <div class="cards-list mt-24" role="group" aria-label="Occupation options">
+        <button class="option-card" id="occ-undergrad" aria-pressed="false" onclick="selectOption(this,'occ','ob07-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Undergraduate student</div>
+            <div class="option-card-desc">Currently pursuing a bachelor's degree</div>
+          </div>
+        </button>
+        <button class="option-card" id="occ-grad" aria-pressed="false" onclick="selectOption(this,'occ','ob07-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Graduate student</div>
+            <div class="option-card-desc">Master's, PhD, or professional degree</div>
+          </div>
+        </button>
+        <button class="option-card" id="occ-faculty" aria-pressed="false" onclick="selectOption(this,'occ','ob07-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Faculty / Staff</div>
+            <div class="option-card-desc">Working at a university or college</div>
+          </div>
+        </button>
+        <button class="option-card" id="occ-alumni" aria-pressed="false" onclick="selectOption(this,'occ','ob07-continue')">
+          <div class="option-card-text">
+            <div class="option-card-title">Alumni</div>
+            <div class="option-card-desc">Graduated from a university</div>
+          </div>
+        </button>
+        <button class="option-card" id="occ-other" aria-pressed="false" onclick="selectOption(this,'occ','ob07-continue')">
+          <div class="option-card-text"><div class="option-card-title">Other</div></div>
+        </button>
+      </div>
+      <div class="mt-auto"></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="btn-primary disabled" id="ob07-continue" disabled>Continue</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     ONBOARDING 08 – Where are you from?
+     Continue: enabled when input has value
+     ============================================================ -->
+<div class="phone-wrapper" id="screen-onboarding-08">
+  <div class="phone-label">Onboarding 08 – Hometown</div>
+  <div class="phone-frame">
+    <div class="status-bar light">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="battery"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+    <div class="screen-content">
+      <div class="onboarding-header">
+        <button class="btn-back" id="ob08-back" aria-label="Go back">&#8249;</button>
+        <span class="onboarding-header-right progress-text">8 / 9</span>
+      </div>
+      <h1 class="screen-title">Where are<br/>you from?</h1>
+      <p class="screen-subtitle">This helps people find common ground with you.</p>
+      <div class="mt-28">
+        <input
+          class="input-underline"
+          type="text"
+          id="input-hometown"
+          placeholder="City, State or Country"
+          autocomplete="address-level2"
+          oninput="toggleContinue('ob08-continue', this.value.trim().length > 0)"
+        />
+      </div>
+      <div class="mt-auto"></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="btn-primary disabled" id="ob08-continue" disabled>Continue</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     ONBOARDING 09 – College Search
+     Continue: enabled after university selection
+     ============================================================ -->
+<div class="phone-wrapper" id="screen-onboarding-09">
+  <div class="phone-label">Onboarding 09 – College Search</div>
+  <div class="phone-frame">
+    <div class="status-bar light">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="battery"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+    <div class="screen-content">
+      <div class="onboarding-header">
+        <button class="btn-back" id="ob09-back" aria-label="Go back">&#8249;</button>
+        <span class="onboarding-header-right progress-text">9 / 9</span>
+      </div>
+      <h1 class="screen-title">Find your<br/>university</h1>
+      <p class="screen-subtitle">Search to connect with students from your campus.</p>
+      <div class="search-bar mt-20" role="search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="search" id="search-college" placeholder="Search universities..." aria-label="Search universities" />
+      </div>
+      <div class="university-list" id="university-list" role="listbox">
+        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-ut">
+          <div class="university-logo">&#x1F918;</div>
+          <div class="university-info">
+            <div class="university-name">University of Texas at Austin</div>
+            <div class="university-location">Austin, TX</div>
+          </div>
+          <div class="university-check"></div>
+        </div>
+        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-stanford">
+          <div class="university-logo">&#x1F332;</div>
+          <div class="university-info">
+            <div class="university-name">Stanford University</div>
+            <div class="university-location">Stanford, CA</div>
+          </div>
+          <div class="university-check"></div>
+        </div>
+        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-mit">
+          <div class="university-logo">&#x2699;</div>
+          <div class="university-info">
+            <div class="university-name">MIT</div>
+            <div class="university-location">Cambridge, MA</div>
+          </div>
+          <div class="university-check"></div>
+        </div>
+        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-nyu">
+          <div class="university-logo">&#x1F5FD;</div>
+          <div class="university-info">
+            <div class="university-name">New York University</div>
+            <div class="university-location">New York, NY</div>
+          </div>
+          <div class="university-check"></div>
+        </div>
+        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-ucla">
+          <div class="university-logo">&#x1F43B;</div>
+          <div class="university-info">
+            <div class="university-name">UCLA</div>
+            <div class="university-location">Los Angeles, CA</div>
+          </div>
+          <div class="university-check"></div>
+        </div>
+        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-michigan">
+          <div class="university-logo">&#x4D;</div>
+          <div class="university-info">
+            <div class="university-name">University of Michigan</div>
+            <div class="university-location">Ann Arbor, MI</div>
+          </div>
+          <div class="university-check"></div>
+        </div>
+      </div>
+      <div class="mt-auto"></div>
+    </div>
+    <div class="bottom-cta-spaced">
+      <button class="btn-primary disabled" id="ob09-continue" disabled>Continue</button>
+      <button class="btn-ghost" id="ob09-skip" style="align-self:center;">Skip for now</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     ONBOARDING 10 – Photo Upload
+     Continue: always enabled (upload is optional to proceed)
+     ============================================================ -->
+<div class="phone-wrapper" id="screen-onboarding-10">
+  <div class="phone-label">Onboarding 10 – Photo Upload</div>
+  <div class="phone-frame">
+    <div class="status-bar light">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="battery"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+    <div class="screen-content">
+      <div class="onboarding-header">
+        <button class="btn-back" id="ob10-back" aria-label="Go back">&#8249;</button>
+      </div>
+      <h1 class="screen-title">Add your<br/>photos</h1>
+      <p class="screen-subtitle">Show the real you. Profiles with photos get 3x more matches.</p>
+      <div class="photo-upload-main mt-20" id="photo-upload-main" role="button" tabindex="0" aria-label="Upload main photo">
+        <div class="upload-icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+        </div>
+        <span class="upload-main-label">Tap to upload main photo</span>
+      </div>
+      <div class="photo-slots">
+        <div class="photo-slot" id="photo-slot-1" role="button" tabindex="0" aria-label="Photo slot 2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="photo-slot" id="photo-slot-2" role="button" tabindex="0" aria-label="Photo slot 3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="photo-slot" id="photo-slot-3" role="button" tabindex="0" aria-label="Photo slot 4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="photo-slot" id="photo-slot-4" role="button" tabindex="0" aria-label="Photo slot 5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="photo-slot" id="photo-slot-5" role="button" tabindex="0" aria-label="Photo slot 6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="photo-slot" id="photo-slot-6" role="button" tabindex="0" aria-label="Photo slot 7">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+      </div>
+      <p class="upload-hint">Add at least 2 photos. Clear face photos work best.</p>
+      <div class="mt-auto"></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="btn-primary" id="ob10-continue">Continue</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     ONBOARDING FINAL – You're all set!
+     ============================================================ -->
+<div class="phone-wrapper" id="screen-onboarding-final">
+  <div class="phone-label">Onboarding Final – Success</div>
+  <div class="phone-frame">
+    <div class="status-bar light">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="battery"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+    <div class="screen-content" style="align-items:center;justify-content:center;text-align:center;gap:20px;">
+      <div class="success-check-wrapper" id="success-check">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h1 class="success-title mt-8">You're all set!</h1>
+      <p class="success-desc">Your profile is ready. Start discovering real connections on your campus.</p>
+      <div style="height:32px;"></div>
+      <button class="btn-primary" id="success-cta" style="width:100%;max-width:300px;">Start Exploring</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT – Interaction Logic
+     ============================================================ -->
+<script>
+  /* ---- Toggle Continue button enabled/disabled state ---- */
+  function toggleContinue(btnId, isEnabled) {
+    var btn = document.getElementById(btnId);
+    if (!btn) return;
+    if (isEnabled) {
+      btn.disabled = false;
+      btn.classList.remove('disabled');
+    } else {
+      btn.disabled = true;
+      btn.classList.add('disabled');
+    }
+  }
+
+  /* ---- Option Card Selection (single-select per group) ---- */
+  function selectOption(el, group, continueId) {
+    document.querySelectorAll('[id^="' + group + '-"]').forEach(function(c) {
+      c.classList.remove('selected');
+      c.setAttribute('aria-pressed', 'false');
+    });
+    el.classList.add('selected');
+    el.setAttribute('aria-pressed', 'true');
+    if (continueId) toggleContinue(continueId, true);
+  }
+
+  /* ---- University Selection ---- */
+  function selectUniversity(el, continueId) {
+    document.querySelectorAll('.university-item').forEach(function(i) {
+      i.classList.remove('selected');
+      i.setAttribute('aria-selected', 'false');
+    });
+    el.classList.add('selected');
+    el.setAttribute('aria-selected', 'true');
+    if (continueId) toggleContinue(continueId, true);
+  }
+
+  /* ---- Age Selector ---- */
+  var ageEl  = document.getElementById('age-display');
+  var btnMin = document.getElementById('btn-age-minus');
+  var btnPls = document.getElementById('btn-age-plus');
+  var age    = 21;
+  var MIN_AGE = 18;
+  var MAX_AGE = 80;
+
+  function updateAge() {
+    if (!ageEl) return;
+    ageEl.textContent = age;
+    if (btnMin) {
+      btnMin.style.opacity = age <= MIN_AGE ? '0.38' : '1';
+      btnMin.disabled = age <= MIN_AGE;
+    }
+    if (btnPls) {
+      btnPls.style.opacity = age >= MAX_AGE ? '0.38' : '1';
+      btnPls.disabled = age >= MAX_AGE;
+    }
+  }
+
+  if (btnMin) {
+    btnMin.addEventListener('click', function() {
+      if (age > MIN_AGE) { age--; updateAge(); }
+    });
+  }
+  if (btnPls) {
+    btnPls.addEventListener('click', function() {
+      if (age < MAX_AGE) { age++; updateAge(); }
+    });
+  }
+  updateAge();
+
+  /* ---- Name screen: init button state (has pre-filled value) ---- */
+  (function() {
+    var nameInput = document.getElementById('input-firstname');
+    if (nameInput) {
+      toggleContinue('ob01-continue', nameInput.value.trim().length > 0);
+    }
+  })();
+</script>
+</body>
+</html>
