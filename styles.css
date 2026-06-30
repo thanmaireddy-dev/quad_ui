@@ -1227,36 +1227,40 @@ body {
 .app-nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 8px 12px 22px;
-  background: var(--screen-bg);
+  justify-content: space-between;
+  padding: 0 8px 16px;
+  background: #FCFBF8;
   border-top: 1px solid var(--border);
   border-radius: 24px 24px 0 0;
   flex-shrink: 0;
   position: relative;
   box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.04);
+  height: 84px;
 }
 
 .app-nav-item {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px 10px;
-  min-width: 60px;
+  padding: 0;
   font-family: var(--font);
   transition: color 0.2s;
+  height: 100%;
+  position: relative;
 }
 
 .app-nav-item svg {
-  width: 22px;
-  height: 22px;
-  stroke-width: 1.8;
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
   fill: none;
   transition: stroke 0.2s;
+  margin-bottom: 4px;
 }
 
 .app-nav-item .nav-label {
@@ -1264,6 +1268,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.2px;
   transition: color 0.2s;
+  margin-bottom: 8px; /* Room for the active dot */
 }
 
 /* Inactive state */
@@ -1284,6 +1289,77 @@ body {
   color: var(--primary);
   font-weight: 600;
 }
+
+/* Center FLAMES Button */
+.app-nav-center {
+  flex: 1.2;
+}
+
+.nav-center-circle {
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(13, 43, 36, 0.15);
+  border: none;
+  margin-bottom: 4px;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.nav-center-circle:hover {
+  transform: translateY(-2px);
+}
+
+.app-nav-center svg {
+  stroke: #ffffff !important;
+  fill: none !important;
+  width: 22px;
+  height: 22px;
+  margin-bottom: 0;
+}
+
+.app-nav-center .nav-label {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Active indicator & notification */
+.nav-active-indicator {
+  width: 4px;
+  height: 4px;
+  background: #93771C;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  bottom: 8px;
+}
+.app-nav-item.active .nav-active-indicator {
+  opacity: 1;
+}
+
+.nav-notification-dot {
+  position: absolute;
+  top: 12px;
+  right: 50%;
+  margin-right: -12px;
+  width: 8px;
+  height: 8px;
+  background: #93771C;
+  border-radius: 50%;
+  border: 2px solid #FCFBF8;
+}
+
+/* Gold Utilities */
+.accent-gold { color: #93771C !important; }
+.bg-accent-gold { background-color: #93771C !important; }
+.border-accent-gold { border-color: #93771C !important; }
+.fill-accent-gold { fill: #93771C !important; }
+.stroke-accent-gold { stroke: #93771C !important; }
 
 /* ============================================================
    PHASE 2 – DISCOVER HEADER

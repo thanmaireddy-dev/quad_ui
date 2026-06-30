@@ -42,7 +42,7 @@
         <!-- QUAD Logo -->
         <div class="landing-logo">
           <span class="landing-logo-text">QUAD</span>
-          <span class="landing-logo-dot"></span>
+          <span class="landing-logo-dot bg-accent-gold"></span>
         </div>
 
         <!-- Hero Content -->
@@ -788,7 +788,7 @@
             </svg>
           </button>
           <button class="swipe-btn swipe-btn-secondary swipe-btn-bookmark" id="btn-swipe-save" aria-label="Save for later">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="stroke-accent-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
             </svg>
           </button>
@@ -796,33 +796,50 @@
       </div>
 
       <div class="app-nav">
-        <button class="app-nav-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-          </svg>
-          <span class="nav-label">Confessions</span>
-        </button>
-        <button class="app-nav-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <path
-              d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
-            </path>
-          </svg>
-          <span class="nav-label">FLAMES</span>
-        </button>
-        <button class="app-nav-item active">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <button class="app-nav-item active" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-discover').style.display='flex';">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
           </svg>
           <span class="nav-label">Discover</span>
+          <div class="nav-active-indicator"></div>
         </button>
-        <button class="app-nav-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        
+        <button class="app-nav-item" onclick="alert('Confessions coming soon')">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="nav-label">Confessions</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+
+        <div class="app-nav-item app-nav-center">
+          <button class="nav-center-circle" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-flames').style.display='flex';">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+            </svg>
+          </button>
+          <span class="nav-label">FLAMES</span>
+          <div class="nav-active-indicator"></div>
+        </div>
+
+        <button class="app-nav-item" onclick="alert('Messages coming soon')">
+          <div class="nav-notification-dot"></div>
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span class="nav-label">Messages</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+
+        <button class="app-nav-item" onclick="alert('Profile coming soon')">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
           <span class="nav-label">Profile</span>
+          <div class="nav-active-indicator"></div>
         </button>
       </div>
     </div>
@@ -885,11 +902,11 @@
           <h1 class="flames-title-text">FLAMES</h1>
           <div class="flames-dots">
             <div class="flames-dot dark"></div>
-            <div class="flames-dot light"></div>
+            <div class="flames-dot light bg-accent-gold"></div>
             <div class="flames-dot dark"></div>
-            <div class="flames-dot light"></div>
+            <div class="flames-dot light bg-accent-gold"></div>
             <div class="flames-dot dark"></div>
-            <div class="flames-dot light"></div>
+            <div class="flames-dot light bg-accent-gold"></div>
           </div>
           <p class="flames-subtitle">Enter two names and see what the FLAMES reveal.</p>
         </div>
@@ -919,31 +936,50 @@
         </div>
       </div>
       <div class="app-nav">
-        <button class="app-nav-item" onclick="document.getElementById('screen-flames').style.display='none'; document.getElementById('screen-discover').style.display='block';">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-          </svg>
-          <span class="nav-label">Confessions</span>
-        </button>
-        <button class="app-nav-item active">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
-          </svg>
-          <span class="nav-label">FLAMES</span>
-        </button>
-        <button class="app-nav-item" onclick="document.getElementById('screen-flames').style.display='none'; document.getElementById('screen-discover').style.display='block';">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-discover').style.display='flex';">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
           </svg>
           <span class="nav-label">Discover</span>
+          <div class="nav-active-indicator"></div>
         </button>
-        <button class="app-nav-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        
+        <button class="app-nav-item" onclick="alert('Confessions coming soon')">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="nav-label">Confessions</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+
+        <div class="app-nav-item app-nav-center active">
+          <button class="nav-center-circle" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-flames').style.display='flex';">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+            </svg>
+          </button>
+          <span class="nav-label">FLAMES</span>
+          <div class="nav-active-indicator"></div>
+        </div>
+
+        <button class="app-nav-item" onclick="alert('Messages coming soon')">
+          <div class="nav-notification-dot"></div>
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span class="nav-label">Messages</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+
+        <button class="app-nav-item" onclick="alert('Profile coming soon')">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
           <span class="nav-label">Profile</span>
+          <div class="nav-active-indicator"></div>
         </button>
       </div>
     </div>
@@ -976,10 +1012,51 @@
         </div>
       </div>
       <div class="app-nav" style="opacity: 0.5; pointer-events: none;">
-        <button class="app-nav-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><span class="nav-label">Confessions</span></button>
-        <button class="app-nav-item active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg><span class="nav-label">FLAMES</span></button>
-        <button class="app-nav-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg><span class="nav-label">Discover</span></button>
-        <button class="app-nav-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span class="nav-label">Profile</span></button>
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-discover').style.display='flex';">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+          <span class="nav-label">Discover</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+        
+        <button class="app-nav-item" onclick="alert('Confessions coming soon')">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="nav-label">Confessions</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+
+        <div class="app-nav-item app-nav-center active">
+          <button class="nav-center-circle" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-flames').style.display='flex';">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+            </svg>
+          </button>
+          <span class="nav-label">FLAMES</span>
+          <div class="nav-active-indicator"></div>
+        </div>
+
+        <button class="app-nav-item" onclick="alert('Messages coming soon')">
+          <div class="nav-notification-dot"></div>
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span class="nav-label">Messages</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+
+        <button class="app-nav-item" onclick="alert('Profile coming soon')">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="nav-label">Profile</span>
+          <div class="nav-active-indicator"></div>
+        </button>
       </div>
     </div>
   </div>
@@ -999,13 +1076,13 @@
       </div>
       <div class="screen-content flames-result-container" style="padding-bottom: 24px; overflow-y: auto;">
         
-        <div class="result-spark-icon">
+        <div class="result-spark-icon fill-accent-gold">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M12 2L15 9l7 3-7 3-3 7-3-7-7-3 7-3z"></path>
           </svg>
         </div>
         
-        <div class="result-label">YOU ARE</div>
+        <div class="result-label accent-gold">YOU ARE</div>
         <h1 class="result-title">Affection</h1>
         
         <div class="compatibility-ring-container">
@@ -1040,12 +1117,51 @@
 
       </div>
       <div class="app-nav">
-        <button class="app-nav-item" onclick="document.getElementById('screen-flames-result').style.display='none'; document.getElementById('screen-discover').style.display='block';">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><span class="nav-label">Confessions</span>
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-discover').style.display='flex';">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+          <span class="nav-label">Discover</span>
+          <div class="nav-active-indicator"></div>
         </button>
-        <button class="app-nav-item active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg><span class="nav-label">FLAMES</span></button>
-        <button class="app-nav-item" onclick="document.getElementById('screen-flames-result').style.display='none'; document.getElementById('screen-discover').style.display='block';"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg><span class="nav-label">Discover</span></button>
-        <button class="app-nav-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span class="nav-label">Profile</span></button>
+        
+        <button class="app-nav-item" onclick="alert('Confessions coming soon')">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="nav-label">Confessions</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+
+        <div class="app-nav-item app-nav-center active">
+          <button class="nav-center-circle" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-flames').style.display='flex';">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+            </svg>
+          </button>
+          <span class="nav-label">FLAMES</span>
+          <div class="nav-active-indicator"></div>
+        </div>
+
+        <button class="app-nav-item" onclick="alert('Messages coming soon')">
+          <div class="nav-notification-dot"></div>
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span class="nav-label">Messages</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+
+        <button class="app-nav-item" onclick="alert('Profile coming soon')">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="nav-label">Profile</span>
+          <div class="nav-active-indicator"></div>
+        </button>
       </div>
       
       <!-- SHARE BOTTOM SHEET -->
@@ -1208,11 +1324,11 @@
           <div class="profile-card-overlay"></div>
           <div class="profile-card-body">
             <div class="distance-badge">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <svg class="stroke-accent-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               ${profile.distance}
             </div>
             <div class="profile-user-info">
-              <div class="profile-name-row"><span class="profile-name">${profile.name}</span><span class="profile-age">${profile.age}</span></div>
+              <div class="profile-name-row"><span class="profile-name">${profile.name}</span>${profile.id === 'maya' ? '<svg class="fill-accent-gold" style="width: 18px; height: 18px; margin-left: 6px; flex-shrink: 0;" viewBox="0 0 24 24"><path d="M12 2l3.09 2.26L18.8 3.5l1.05 3.65 3.37 1.77-1.4 3.57.9 3.7-3.1 2.2-1.5 3.5-3.6-1.1-2.9 2.5-2.9-2.5-3.6 1.1-1.5-3.5-.9-3.7-1.4-3.57 3.37-1.77L1.15 7.15 2.2 3.5l3.71.76L9 2zm-.2 12.8l-3.3-3.3-1.4 1.4 4.7 4.7 9.3-9.3-1.4-1.4-7.9 7.9z"/></svg>' : ''}<span class="profile-age">${profile.age}</span></div>
               <div class="profile-details">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
                 ${profile.course} <span class="profile-details-sep"></span> ${profile.year}
