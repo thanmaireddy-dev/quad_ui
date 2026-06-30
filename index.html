@@ -1,716 +1,1160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QUAD – FLAMES App UI Reference</title>
-  <meta name="description" content="High-fidelity HTML/CSS mockup of the QUAD dating app — Landing and Onboarding screens. Visual reference for React Native developers." />
+  <meta name="description"
+    content="High-fidelity HTML/CSS mockup of the QUAD dating app — Landing and Onboarding screens. Visual reference for React Native developers." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-<!-- ============================================================
+  <!-- ============================================================
      LANDING SCREEN
      ============================================================ -->
-<div class="phone-wrapper landing-phone" id="screen-landing">
-  <div class="phone-label">Landing Screen</div>
-  <div class="phone-frame">
+  <div class="phone-wrapper landing-phone" id="screen-landing">
+    <div class="phone-label">Landing Screen</div>
+    <div class="phone-frame">
 
-    <!-- Hero – placeholder background active until real image/video is provided -->
-    <div class="landing-hero">
-      <img src="assets/landing-hero.jpg" alt="Students on campus" onerror="this.style.display='none'" />
-      <div class="landing-hero-overlay"></div>
+      <!-- Hero – placeholder background active until real image/video is provided -->
+      <div class="landing-hero">
+        <img src="assets/landing-hero.jpg" alt="Students on campus" onerror="this.style.display='none'" />
+        <div class="landing-hero-overlay"></div>
+      </div>
+
+      <div class="landing-frame-content">
+        <div class="status-bar dark">
+          <span class="status-time">9:41</span>
+          <div class="status-icons">
+            <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+            <div class="battery">
+              <div class="battery-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUAD Logo -->
+        <div class="landing-logo">
+          <span class="landing-logo-text">QUAD</span>
+          <span class="landing-logo-dot"></span>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="landing-body">
+          <h1 class="landing-headline">Meet people who<br />share your campus.</h1>
+          <p class="landing-subtext">Real students. Real connections.<br />Verified .edu only.</p>
+
+          <div class="landing-actions">
+            <!-- .edu email button -->
+            <button class="btn-landing-edu" id="btn-edu-email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              Continue with .edu email
+            </button>
+
+            <!-- Google button -->
+            <button class="btn-landing-google" id="btn-google">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48">
+                <path fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                <path fill="#4285F4"
+                  d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                <path fill="#FBBC05"
+                  d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                <path fill="#34A853"
+                  d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.29-8.16 2.29-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+              </svg>
+              Continue with Google
+            </button>
+          </div>
+
+          <div class="landing-login-row">
+            <span>Already a student?</span>
+            <a href="#" id="link-login">Log in</a>
+          </div>
+        </div>
+
+        <!-- Footer verification -->
+        <div class="landing-footer">
+          <svg class="landing-footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <polyline points="22 4 12 14.01 9 11.01" />
+          </svg>
+          <span>Verified .edu email &middot; 500+ universities</span>
+        </div>
+      </div>
+
     </div>
-
-    <div class="landing-frame-content">
-      <div class="status-bar dark">
-        <span class="status-time">9:41</span>
-        <div class="status-icons">
-          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-          <div class="battery"><div class="battery-fill"></div></div>
-        </div>
-      </div>
-
-      <!-- QUAD Logo -->
-      <div class="landing-logo">
-        <span class="landing-logo-text">QUAD</span>
-        <span class="landing-logo-dot"></span>
-      </div>
-
-      <!-- Hero Content -->
-      <div class="landing-body">
-        <h1 class="landing-headline">Meet people who<br/>share your campus.</h1>
-        <p class="landing-subtext">Real students. Real connections.<br/>Verified .edu only.</p>
-
-        <div class="landing-actions">
-          <!-- .edu email button -->
-          <button class="btn-landing-edu" id="btn-edu-email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="16" x="2" y="4" rx="2"/>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-            </svg>
-            Continue with .edu email
-          </button>
-
-          <!-- Google button -->
-          <button class="btn-landing-google" id="btn-google">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48">
-              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.29-8.16 2.29-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-            </svg>
-            Continue with Google
-          </button>
-        </div>
-
-        <div class="landing-login-row">
-          <span>Already a student?</span>
-          <a href="#" id="link-login">Log in</a>
-        </div>
-      </div>
-
-      <!-- Footer verification -->
-      <div class="landing-footer">
-        <svg class="landing-footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-          <polyline points="22 4 12 14.01 9 11.01"/>
-        </svg>
-        <span>Verified .edu email &middot; 500+ universities</span>
-      </div>
-    </div>
-
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      ONBOARDING 01 – What should people call you?
      Continue: enabled when input has value
      ============================================================ -->
-<div class="phone-wrapper" id="screen-onboarding-01">
-  <div class="phone-label">Onboarding 01 – Name</div>
-  <div class="phone-frame">
-    <div class="status-bar light">
-      <span class="status-time">9:41</span>
-      <div class="status-icons">
-        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-        <div class="battery"><div class="battery-fill"></div></div>
+  <div class="phone-wrapper" id="screen-onboarding-01">
+    <div class="phone-label">Onboarding 01 – Name</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="screen-content">
-      <div class="onboarding-header">
-        <button class="btn-back" id="ob01-back" aria-label="Go back">&#8249;</button>
+      <div class="screen-content">
+        <div class="onboarding-header">
+          <button class="btn-back" id="ob01-back" aria-label="Go back">&#8249;</button>
+        </div>
+        <h1 class="screen-title">What should<br />people call you?</h1>
+        <div class="mt-28">
+          <input class="input-underline" type="text" id="input-firstname" placeholder="First name" value="Thanmaie"
+            autocomplete="given-name" oninput="toggleContinue('ob01-continue', this.value.trim().length > 0)" />
+        </div>
+        <div class="mt-auto"></div>
       </div>
-      <h1 class="screen-title">What should<br/>people call you?</h1>
-      <div class="mt-28">
-        <input
-          class="input-underline"
-          type="text"
-          id="input-firstname"
-          placeholder="First name"
-          value="Thanmaie"
-          autocomplete="given-name"
-          oninput="toggleContinue('ob01-continue', this.value.trim().length > 0)"
-        />
+      <div class="bottom-cta">
+        <button class="btn-primary" id="ob01-continue">Continue</button>
       </div>
-      <div class="mt-auto"></div>
-    </div>
-    <div class="bottom-cta">
-      <button class="btn-primary" id="ob01-continue">Continue</button>
-    </div>
 
+    </div>
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      ONBOARDING 02 – How old are you?
      Continue: always enabled (age preset to 21)
      ============================================================ -->
-<div class="phone-wrapper" id="screen-onboarding-02">
-  <div class="phone-label">Onboarding 02 – Age</div>
-  <div class="phone-frame">
-    <div class="status-bar light">
-      <span class="status-time">9:41</span>
-      <div class="status-icons">
-        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-        <div class="battery"><div class="battery-fill"></div></div>
+  <div class="phone-wrapper" id="screen-onboarding-02">
+    <div class="phone-label">Onboarding 02 – Age</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="screen-content">
-      <div class="onboarding-header">
-        <button class="btn-back" id="ob02-back" aria-label="Go back">&#8249;</button>
-        <span class="onboarding-header-right progress-text">2 / 9</span>
+      <div class="screen-content">
+        <div class="onboarding-header">
+          <button class="btn-back" id="ob02-back" aria-label="Go back">&#8249;</button>
+          <span class="onboarding-header-right progress-text">2 / 9</span>
+        </div>
+        <h1 class="screen-title">How old<br />are you?</h1>
+        <div class="age-selector-row">
+          <button class="btn-circle minus" id="btn-age-minus" aria-label="Decrease age">&#8722;</button>
+          <div class="age-display" id="age-display" aria-live="polite">21</div>
+          <button class="btn-circle plus" id="btn-age-plus" aria-label="Increase age">+</button>
+        </div>
+        <p class="age-min-label">Minimum age: 18</p>
+        <div class="mt-auto"></div>
       </div>
-      <h1 class="screen-title">How old<br/>are you?</h1>
-      <div class="age-selector-row">
-        <button class="btn-circle minus" id="btn-age-minus" aria-label="Decrease age">&#8722;</button>
-        <div class="age-display" id="age-display" aria-live="polite">21</div>
-        <button class="btn-circle plus" id="btn-age-plus" aria-label="Increase age">+</button>
+      <div class="bottom-cta">
+        <button class="btn-primary" id="ob02-continue">Continue</button>
       </div>
-      <p class="age-min-label">Minimum age: 18</p>
-      <div class="mt-auto"></div>
-    </div>
-    <div class="bottom-cta">
-      <button class="btn-primary" id="ob02-continue">Continue</button>
-    </div>
 
+    </div>
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      ONBOARDING 03 – What best describes you? (Gender)
      Continue: enabled after card selection
      ============================================================ -->
-<div class="phone-wrapper" id="screen-onboarding-03">
-  <div class="phone-label">Onboarding 03 – Gender</div>
-  <div class="phone-frame">
-    <div class="status-bar light">
-      <span class="status-time">9:41</span>
-      <div class="status-icons">
-        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-        <div class="battery"><div class="battery-fill"></div></div>
+  <div class="phone-wrapper" id="screen-onboarding-03">
+    <div class="phone-label">Onboarding 03 – Gender</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="screen-content">
-      <div class="onboarding-header">
-        <button class="btn-back" id="ob03-back" aria-label="Go back">&#8249;</button>
-        <span class="onboarding-header-right progress-text">3 / 9</span>
+      <div class="screen-content">
+        <div class="onboarding-header">
+          <button class="btn-back" id="ob03-back" aria-label="Go back">&#8249;</button>
+          <span class="onboarding-header-right progress-text">3 / 9</span>
+        </div>
+        <h1 class="screen-title">What best<br />describes you?</h1>
+        <div class="cards-list mt-24" role="group" aria-label="Gender options">
+          <button class="option-card" id="gender-man" aria-pressed="false"
+            onclick="selectOption(this,'gender','ob03-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Man</div>
+            </div>
+          </button>
+          <button class="option-card" id="gender-woman" aria-pressed="false"
+            onclick="selectOption(this,'gender','ob03-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Woman</div>
+            </div>
+          </button>
+          <button class="option-card" id="gender-nonbinary" aria-pressed="false"
+            onclick="selectOption(this,'gender','ob03-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Non-binary</div>
+            </div>
+          </button>
+          <button class="option-card" id="gender-pnts" aria-pressed="false"
+            onclick="selectOption(this,'gender','ob03-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Prefer not to say</div>
+            </div>
+          </button>
+        </div>
+        <div class="mt-auto"></div>
       </div>
-      <h1 class="screen-title">What best<br/>describes you?</h1>
-      <div class="cards-list mt-24" role="group" aria-label="Gender options">
-        <button class="option-card" id="gender-man" aria-pressed="false" onclick="selectOption(this,'gender','ob03-continue')">
-          <div class="option-card-text"><div class="option-card-title">Man</div></div>
-        </button>
-        <button class="option-card" id="gender-woman" aria-pressed="false" onclick="selectOption(this,'gender','ob03-continue')">
-          <div class="option-card-text"><div class="option-card-title">Woman</div></div>
-        </button>
-        <button class="option-card" id="gender-nonbinary" aria-pressed="false" onclick="selectOption(this,'gender','ob03-continue')">
-          <div class="option-card-text"><div class="option-card-title">Non-binary</div></div>
-        </button>
-        <button class="option-card" id="gender-pnts" aria-pressed="false" onclick="selectOption(this,'gender','ob03-continue')">
-          <div class="option-card-text"><div class="option-card-title">Prefer not to say</div></div>
-        </button>
+      <div class="bottom-cta">
+        <button class="btn-primary disabled" id="ob03-continue" disabled>Continue</button>
       </div>
-      <div class="mt-auto"></div>
-    </div>
-    <div class="bottom-cta">
-      <button class="btn-primary disabled" id="ob03-continue" disabled>Continue</button>
-    </div>
 
+    </div>
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      ONBOARDING 04 – Who are you interested in?
      Continue: enabled after card selection
      ============================================================ -->
-<div class="phone-wrapper" id="screen-onboarding-04">
-  <div class="phone-label">Onboarding 04 – Interest</div>
-  <div class="phone-frame">
-    <div class="status-bar light">
-      <span class="status-time">9:41</span>
-      <div class="status-icons">
-        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-        <div class="battery"><div class="battery-fill"></div></div>
+  <div class="phone-wrapper" id="screen-onboarding-04">
+    <div class="phone-label">Onboarding 04 – Interest</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="screen-content">
-      <div class="onboarding-header">
-        <button class="btn-back" id="ob04-back" aria-label="Go back">&#8249;</button>
-        <span class="onboarding-header-right progress-text">4 / 9</span>
+      <div class="screen-content">
+        <div class="onboarding-header">
+          <button class="btn-back" id="ob04-back" aria-label="Go back">&#8249;</button>
+          <span class="onboarding-header-right progress-text">4 / 9</span>
+        </div>
+        <h1 class="screen-title">Who are you<br />interested in?</h1>
+        <div class="cards-list mt-24" role="group" aria-label="Interest options">
+          <button class="option-card" id="interest-men" aria-pressed="false"
+            onclick="selectOption(this,'interest','ob04-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Men</div>
+            </div>
+          </button>
+          <button class="option-card" id="interest-women" aria-pressed="false"
+            onclick="selectOption(this,'interest','ob04-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Women</div>
+            </div>
+          </button>
+          <button class="option-card" id="interest-everyone" aria-pressed="false"
+            onclick="selectOption(this,'interest','ob04-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Everyone</div>
+            </div>
+          </button>
+          <button class="option-card" id="interest-pnts" aria-pressed="false"
+            onclick="selectOption(this,'interest','ob04-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Prefer not to say</div>
+            </div>
+          </button>
+        </div>
+        <div class="mt-auto"></div>
       </div>
-      <h1 class="screen-title">Who are you<br/>interested in?</h1>
-      <div class="cards-list mt-24" role="group" aria-label="Interest options">
-        <button class="option-card" id="interest-men" aria-pressed="false" onclick="selectOption(this,'interest','ob04-continue')">
-          <div class="option-card-text"><div class="option-card-title">Men</div></div>
-        </button>
-        <button class="option-card" id="interest-women" aria-pressed="false" onclick="selectOption(this,'interest','ob04-continue')">
-          <div class="option-card-text"><div class="option-card-title">Women</div></div>
-        </button>
-        <button class="option-card" id="interest-everyone" aria-pressed="false" onclick="selectOption(this,'interest','ob04-continue')">
-          <div class="option-card-text"><div class="option-card-title">Everyone</div></div>
-        </button>
-        <button class="option-card" id="interest-pnts" aria-pressed="false" onclick="selectOption(this,'interest','ob04-continue')">
-          <div class="option-card-text"><div class="option-card-title">Prefer not to say</div></div>
-        </button>
+      <div class="bottom-cta">
+        <button class="btn-primary disabled" id="ob04-continue" disabled>Continue</button>
       </div>
-      <div class="mt-auto"></div>
-    </div>
-    <div class="bottom-cta">
-      <button class="btn-primary disabled" id="ob04-continue" disabled>Continue</button>
-    </div>
 
+    </div>
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      ONBOARDING 05 – Relationship Intent
      Continue: enabled after card selection
      ============================================================ -->
-<div class="phone-wrapper" id="screen-onboarding-05">
-  <div class="phone-label">Onboarding 05 – Relationship Intent</div>
-  <div class="phone-frame">
-    <div class="status-bar light">
-      <span class="status-time">9:41</span>
-      <div class="status-icons">
-        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-        <div class="battery"><div class="battery-fill"></div></div>
+  <div class="phone-wrapper" id="screen-onboarding-05">
+    <div class="phone-label">Onboarding 05 – Relationship Intent</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="screen-content">
-      <div class="onboarding-header">
-        <button class="btn-back" id="ob05-back" aria-label="Go back">&#8249;</button>
-        <span class="onboarding-header-right progress-text">5 / 9</span>
+      <div class="screen-content">
+        <div class="onboarding-header">
+          <button class="btn-back" id="ob05-back" aria-label="Go back">&#8249;</button>
+          <span class="onboarding-header-right progress-text">5 / 9</span>
+        </div>
+        <h1 class="screen-title">What are you<br />looking for?</h1>
+        <div class="cards-list mt-24" role="group" aria-label="Relationship intent options">
+          <button class="option-card" id="intent-relationship" aria-pressed="false"
+            onclick="selectOption(this,'intent','ob05-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Long-term relationship</div>
+              <div class="option-card-desc">Looking for something serious and committed</div>
+            </div>
+          </button>
+          <button class="option-card" id="intent-casual" aria-pressed="false"
+            onclick="selectOption(this,'intent','ob05-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Casual dating</div>
+              <div class="option-card-desc">Keeping it light and seeing where things go</div>
+            </div>
+          </button>
+          <button class="option-card" id="intent-friends" aria-pressed="false"
+            onclick="selectOption(this,'intent','ob05-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Friends first</div>
+              <div class="option-card-desc">Getting to know people on campus</div>
+            </div>
+          </button>
+          <button class="option-card" id="intent-open" aria-pressed="false"
+            onclick="selectOption(this,'intent','ob05-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Open to anything</div>
+              <div class="option-card-desc">Not sure yet, just exploring</div>
+            </div>
+          </button>
+        </div>
+        <div class="mt-auto"></div>
       </div>
-      <h1 class="screen-title">What are you<br/>looking for?</h1>
-      <div class="cards-list mt-24" role="group" aria-label="Relationship intent options">
-        <button class="option-card" id="intent-relationship" aria-pressed="false" onclick="selectOption(this,'intent','ob05-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Long-term relationship</div>
-            <div class="option-card-desc">Looking for something serious and committed</div>
-          </div>
-        </button>
-        <button class="option-card" id="intent-casual" aria-pressed="false" onclick="selectOption(this,'intent','ob05-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Casual dating</div>
-            <div class="option-card-desc">Keeping it light and seeing where things go</div>
-          </div>
-        </button>
-        <button class="option-card" id="intent-friends" aria-pressed="false" onclick="selectOption(this,'intent','ob05-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Friends first</div>
-            <div class="option-card-desc">Getting to know people on campus</div>
-          </div>
-        </button>
-        <button class="option-card" id="intent-open" aria-pressed="false" onclick="selectOption(this,'intent','ob05-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Open to anything</div>
-            <div class="option-card-desc">Not sure yet, just exploring</div>
-          </div>
-        </button>
+      <div class="bottom-cta">
+        <button class="btn-primary disabled" id="ob05-continue" disabled>Continue</button>
       </div>
-      <div class="mt-auto"></div>
-    </div>
-    <div class="bottom-cta">
-      <button class="btn-primary disabled" id="ob05-continue" disabled>Continue</button>
-    </div>
 
+    </div>
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      ONBOARDING 06 – Monogamy Preference
      Continue: enabled after card selection
      ============================================================ -->
-<div class="phone-wrapper" id="screen-onboarding-06">
-  <div class="phone-label">Onboarding 06 – Monogamy</div>
-  <div class="phone-frame">
-    <div class="status-bar light">
-      <span class="status-time">9:41</span>
-      <div class="status-icons">
-        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-        <div class="battery"><div class="battery-fill"></div></div>
+  <div class="phone-wrapper" id="screen-onboarding-06">
+    <div class="phone-label">Onboarding 06 – Monogamy</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="screen-content">
-      <div class="onboarding-header">
-        <button class="btn-back" id="ob06-back" aria-label="Go back">&#8249;</button>
-        <span class="onboarding-header-right progress-text">6 / 9</span>
+      <div class="screen-content">
+        <div class="onboarding-header">
+          <button class="btn-back" id="ob06-back" aria-label="Go back">&#8249;</button>
+          <span class="onboarding-header-right progress-text">6 / 9</span>
+        </div>
+        <h1 class="screen-title">What's your<br />relationship style?</h1>
+        <div class="cards-list mt-24" role="group" aria-label="Monogamy options">
+          <button class="option-card" id="mono-monogamous" aria-pressed="false"
+            onclick="selectOption(this,'mono','ob06-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Monogamous</div>
+              <div class="option-card-desc">One partner at a time</div>
+            </div>
+          </button>
+          <button class="option-card" id="mono-open" aria-pressed="false"
+            onclick="selectOption(this,'mono','ob06-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Open relationship</div>
+              <div class="option-card-desc">Open to multiple connections</div>
+            </div>
+          </button>
+          <button class="option-card" id="mono-poly" aria-pressed="false"
+            onclick="selectOption(this,'mono','ob06-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Polyamorous</div>
+              <div class="option-card-desc">Multiple meaningful relationships</div>
+            </div>
+          </button>
+          <button class="option-card" id="mono-flexible" aria-pressed="false"
+            onclick="selectOption(this,'mono','ob06-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Flexible</div>
+              <div class="option-card-desc">Depends on the connection</div>
+            </div>
+          </button>
+          <button class="option-card" id="mono-pnts" aria-pressed="false"
+            onclick="selectOption(this,'mono','ob06-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Prefer not to say</div>
+            </div>
+          </button>
+        </div>
+        <div class="mt-auto"></div>
       </div>
-      <h1 class="screen-title">What's your<br/>relationship style?</h1>
-      <div class="cards-list mt-24" role="group" aria-label="Monogamy options">
-        <button class="option-card" id="mono-monogamous" aria-pressed="false" onclick="selectOption(this,'mono','ob06-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Monogamous</div>
-            <div class="option-card-desc">One partner at a time</div>
-          </div>
-        </button>
-        <button class="option-card" id="mono-open" aria-pressed="false" onclick="selectOption(this,'mono','ob06-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Open relationship</div>
-            <div class="option-card-desc">Open to multiple connections</div>
-          </div>
-        </button>
-        <button class="option-card" id="mono-poly" aria-pressed="false" onclick="selectOption(this,'mono','ob06-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Polyamorous</div>
-            <div class="option-card-desc">Multiple meaningful relationships</div>
-          </div>
-        </button>
-        <button class="option-card" id="mono-flexible" aria-pressed="false" onclick="selectOption(this,'mono','ob06-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Flexible</div>
-            <div class="option-card-desc">Depends on the connection</div>
-          </div>
-        </button>
-        <button class="option-card" id="mono-pnts" aria-pressed="false" onclick="selectOption(this,'mono','ob06-continue')">
-          <div class="option-card-text"><div class="option-card-title">Prefer not to say</div></div>
-        </button>
+      <div class="bottom-cta">
+        <button class="btn-primary disabled" id="ob06-continue" disabled>Continue</button>
       </div>
-      <div class="mt-auto"></div>
-    </div>
-    <div class="bottom-cta">
-      <button class="btn-primary disabled" id="ob06-continue" disabled>Continue</button>
-    </div>
 
+    </div>
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      ONBOARDING 07 – Occupation
      Continue: enabled after card selection
      ============================================================ -->
-<div class="phone-wrapper" id="screen-onboarding-07">
-  <div class="phone-label">Onboarding 07 – Occupation</div>
-  <div class="phone-frame">
-    <div class="status-bar light">
-      <span class="status-time">9:41</span>
-      <div class="status-icons">
-        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-        <div class="battery"><div class="battery-fill"></div></div>
+  <div class="phone-wrapper" id="screen-onboarding-07">
+    <div class="phone-label">Onboarding 07 – Occupation</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="screen-content">
-      <div class="onboarding-header">
-        <button class="btn-back" id="ob07-back" aria-label="Go back">&#8249;</button>
-        <span class="onboarding-header-right progress-text">7 / 9</span>
+      <div class="screen-content">
+        <div class="onboarding-header">
+          <button class="btn-back" id="ob07-back" aria-label="Go back">&#8249;</button>
+          <span class="onboarding-header-right progress-text">7 / 9</span>
+        </div>
+        <h1 class="screen-title">What's your<br />occupation?</h1>
+        <div class="cards-list mt-24" role="group" aria-label="Occupation options">
+          <button class="option-card" id="occ-undergrad" aria-pressed="false"
+            onclick="selectOption(this,'occ','ob07-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Undergraduate student</div>
+              <div class="option-card-desc">Currently pursuing a bachelor's degree</div>
+            </div>
+          </button>
+          <button class="option-card" id="occ-grad" aria-pressed="false"
+            onclick="selectOption(this,'occ','ob07-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Graduate student</div>
+              <div class="option-card-desc">Master's, PhD, or professional degree</div>
+            </div>
+          </button>
+          <button class="option-card" id="occ-faculty" aria-pressed="false"
+            onclick="selectOption(this,'occ','ob07-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Faculty / Staff</div>
+              <div class="option-card-desc">Working at a university or college</div>
+            </div>
+          </button>
+          <button class="option-card" id="occ-alumni" aria-pressed="false"
+            onclick="selectOption(this,'occ','ob07-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Alumni</div>
+              <div class="option-card-desc">Graduated from a university</div>
+            </div>
+          </button>
+          <button class="option-card" id="occ-other" aria-pressed="false"
+            onclick="selectOption(this,'occ','ob07-continue')">
+            <div class="option-card-text">
+              <div class="option-card-title">Other</div>
+            </div>
+          </button>
+        </div>
+        <div class="mt-auto"></div>
       </div>
-      <h1 class="screen-title">What's your<br/>occupation?</h1>
-      <div class="cards-list mt-24" role="group" aria-label="Occupation options">
-        <button class="option-card" id="occ-undergrad" aria-pressed="false" onclick="selectOption(this,'occ','ob07-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Undergraduate student</div>
-            <div class="option-card-desc">Currently pursuing a bachelor's degree</div>
-          </div>
-        </button>
-        <button class="option-card" id="occ-grad" aria-pressed="false" onclick="selectOption(this,'occ','ob07-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Graduate student</div>
-            <div class="option-card-desc">Master's, PhD, or professional degree</div>
-          </div>
-        </button>
-        <button class="option-card" id="occ-faculty" aria-pressed="false" onclick="selectOption(this,'occ','ob07-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Faculty / Staff</div>
-            <div class="option-card-desc">Working at a university or college</div>
-          </div>
-        </button>
-        <button class="option-card" id="occ-alumni" aria-pressed="false" onclick="selectOption(this,'occ','ob07-continue')">
-          <div class="option-card-text">
-            <div class="option-card-title">Alumni</div>
-            <div class="option-card-desc">Graduated from a university</div>
-          </div>
-        </button>
-        <button class="option-card" id="occ-other" aria-pressed="false" onclick="selectOption(this,'occ','ob07-continue')">
-          <div class="option-card-text"><div class="option-card-title">Other</div></div>
-        </button>
+      <div class="bottom-cta">
+        <button class="btn-primary disabled" id="ob07-continue" disabled>Continue</button>
       </div>
-      <div class="mt-auto"></div>
-    </div>
-    <div class="bottom-cta">
-      <button class="btn-primary disabled" id="ob07-continue" disabled>Continue</button>
-    </div>
 
+    </div>
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      ONBOARDING 08 – Where are you from?
      Continue: enabled when input has value
      ============================================================ -->
-<div class="phone-wrapper" id="screen-onboarding-08">
-  <div class="phone-label">Onboarding 08 – Hometown</div>
-  <div class="phone-frame">
-    <div class="status-bar light">
-      <span class="status-time">9:41</span>
-      <div class="status-icons">
-        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-        <div class="battery"><div class="battery-fill"></div></div>
+  <div class="phone-wrapper" id="screen-onboarding-08">
+    <div class="phone-label">Onboarding 08 – Hometown</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="screen-content">
-      <div class="onboarding-header">
-        <button class="btn-back" id="ob08-back" aria-label="Go back">&#8249;</button>
-        <span class="onboarding-header-right progress-text">8 / 9</span>
+      <div class="screen-content">
+        <div class="onboarding-header">
+          <button class="btn-back" id="ob08-back" aria-label="Go back">&#8249;</button>
+          <span class="onboarding-header-right progress-text">8 / 9</span>
+        </div>
+        <h1 class="screen-title">Where are<br />you from?</h1>
+        <p class="screen-subtitle">This helps people find common ground with you.</p>
+        <div class="mt-28">
+          <input class="input-underline" type="text" id="input-hometown" placeholder="City, State or Country"
+            autocomplete="address-level2" oninput="toggleContinue('ob08-continue', this.value.trim().length > 0)" />
+        </div>
+        <div class="mt-auto"></div>
       </div>
-      <h1 class="screen-title">Where are<br/>you from?</h1>
-      <p class="screen-subtitle">This helps people find common ground with you.</p>
-      <div class="mt-28">
-        <input
-          class="input-underline"
-          type="text"
-          id="input-hometown"
-          placeholder="City, State or Country"
-          autocomplete="address-level2"
-          oninput="toggleContinue('ob08-continue', this.value.trim().length > 0)"
-        />
+      <div class="bottom-cta">
+        <button class="btn-primary disabled" id="ob08-continue" disabled>Continue</button>
       </div>
-      <div class="mt-auto"></div>
-    </div>
-    <div class="bottom-cta">
-      <button class="btn-primary disabled" id="ob08-continue" disabled>Continue</button>
-    </div>
 
+    </div>
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      ONBOARDING 09 – College Search
      Continue: enabled after university selection
      ============================================================ -->
-<div class="phone-wrapper" id="screen-onboarding-09">
-  <div class="phone-label">Onboarding 09 – College Search</div>
-  <div class="phone-frame">
-    <div class="status-bar light">
-      <span class="status-time">9:41</span>
-      <div class="status-icons">
-        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-        <div class="battery"><div class="battery-fill"></div></div>
-      </div>
-    </div>
-    <div class="screen-content">
-      <div class="onboarding-header">
-        <button class="btn-back" id="ob09-back" aria-label="Go back">&#8249;</button>
-        <span class="onboarding-header-right progress-text">9 / 9</span>
-      </div>
-      <h1 class="screen-title">Find your<br/>university</h1>
-      <p class="screen-subtitle">Search to connect with students from your campus.</p>
-      <div class="search-bar mt-20" role="search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-        </svg>
-        <input type="search" id="search-college" placeholder="Search universities..." aria-label="Search universities" />
-      </div>
-      <div class="university-list" id="university-list" role="listbox">
-        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-ut">
-          <div class="university-logo">&#x1F918;</div>
-          <div class="university-info">
-            <div class="university-name">University of Texas at Austin</div>
-            <div class="university-location">Austin, TX</div>
+  <div class="phone-wrapper" id="screen-onboarding-09">
+    <div class="phone-label">Onboarding 09 – College Search</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
           </div>
-          <div class="university-check"></div>
-        </div>
-        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-stanford">
-          <div class="university-logo">&#x1F332;</div>
-          <div class="university-info">
-            <div class="university-name">Stanford University</div>
-            <div class="university-location">Stanford, CA</div>
-          </div>
-          <div class="university-check"></div>
-        </div>
-        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-mit">
-          <div class="university-logo">&#x2699;</div>
-          <div class="university-info">
-            <div class="university-name">MIT</div>
-            <div class="university-location">Cambridge, MA</div>
-          </div>
-          <div class="university-check"></div>
-        </div>
-        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-nyu">
-          <div class="university-logo">&#x1F5FD;</div>
-          <div class="university-info">
-            <div class="university-name">New York University</div>
-            <div class="university-location">New York, NY</div>
-          </div>
-          <div class="university-check"></div>
-        </div>
-        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-ucla">
-          <div class="university-logo">&#x1F43B;</div>
-          <div class="university-info">
-            <div class="university-name">UCLA</div>
-            <div class="university-location">Los Angeles, CA</div>
-          </div>
-          <div class="university-check"></div>
-        </div>
-        <div class="university-item" role="option" aria-selected="false" onclick="selectUniversity(this,'ob09-continue')" id="uni-michigan">
-          <div class="university-logo">&#x4D;</div>
-          <div class="university-info">
-            <div class="university-name">University of Michigan</div>
-            <div class="university-location">Ann Arbor, MI</div>
-          </div>
-          <div class="university-check"></div>
         </div>
       </div>
-      <div class="mt-auto"></div>
-    </div>
-    <div class="bottom-cta-spaced">
-      <button class="btn-primary disabled" id="ob09-continue" disabled>Continue</button>
-      <button class="btn-ghost" id="ob09-skip" style="align-self:center;">Skip for now</button>
-    </div>
+      <div class="screen-content">
+        <div class="onboarding-header">
+          <button class="btn-back" id="ob09-back" aria-label="Go back">&#8249;</button>
+          <span class="onboarding-header-right progress-text">9 / 9</span>
+        </div>
+        <h1 class="screen-title">Find your<br />university</h1>
+        <p class="screen-subtitle">Search to connect with students from your campus.</p>
+        <div class="search-bar mt-20" role="search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input type="search" id="search-college" placeholder="Search universities..."
+            aria-label="Search universities" />
+        </div>
+        <div class="university-list" id="university-list" role="listbox">
+          <div class="university-item" role="option" aria-selected="false"
+            onclick="selectUniversity(this,'ob09-continue')" id="uni-ut">
+            <div class="university-logo">&#x1F918;</div>
+            <div class="university-info">
+              <div class="university-name">University of Texas at Austin</div>
+              <div class="university-location">Austin, TX</div>
+            </div>
+            <div class="university-check"></div>
+          </div>
+          <div class="university-item" role="option" aria-selected="false"
+            onclick="selectUniversity(this,'ob09-continue')" id="uni-stanford">
+            <div class="university-logo">&#x1F332;</div>
+            <div class="university-info">
+              <div class="university-name">Stanford University</div>
+              <div class="university-location">Stanford, CA</div>
+            </div>
+            <div class="university-check"></div>
+          </div>
+          <div class="university-item" role="option" aria-selected="false"
+            onclick="selectUniversity(this,'ob09-continue')" id="uni-mit">
+            <div class="university-logo">&#x2699;</div>
+            <div class="university-info">
+              <div class="university-name">MIT</div>
+              <div class="university-location">Cambridge, MA</div>
+            </div>
+            <div class="university-check"></div>
+          </div>
+          <div class="university-item" role="option" aria-selected="false"
+            onclick="selectUniversity(this,'ob09-continue')" id="uni-nyu">
+            <div class="university-logo">&#x1F5FD;</div>
+            <div class="university-info">
+              <div class="university-name">New York University</div>
+              <div class="university-location">New York, NY</div>
+            </div>
+            <div class="university-check"></div>
+          </div>
+          <div class="university-item" role="option" aria-selected="false"
+            onclick="selectUniversity(this,'ob09-continue')" id="uni-ucla">
+            <div class="university-logo">&#x1F43B;</div>
+            <div class="university-info">
+              <div class="university-name">UCLA</div>
+              <div class="university-location">Los Angeles, CA</div>
+            </div>
+            <div class="university-check"></div>
+          </div>
+          <div class="university-item" role="option" aria-selected="false"
+            onclick="selectUniversity(this,'ob09-continue')" id="uni-michigan">
+            <div class="university-logo">&#x4D;</div>
+            <div class="university-info">
+              <div class="university-name">University of Michigan</div>
+              <div class="university-location">Ann Arbor, MI</div>
+            </div>
+            <div class="university-check"></div>
+          </div>
+        </div>
+        <div class="mt-auto"></div>
+      </div>
+      <div class="bottom-cta-spaced">
+        <button class="btn-primary disabled" id="ob09-continue" disabled>Continue</button>
+        <button class="btn-ghost" id="ob09-skip" style="align-self:center;">Skip for now</button>
+      </div>
 
+    </div>
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      ONBOARDING 10 – Photo Upload
      Continue: always enabled (upload is optional to proceed)
      ============================================================ -->
-<div class="phone-wrapper" id="screen-onboarding-10">
-  <div class="phone-label">Onboarding 10 – Photo Upload</div>
-  <div class="phone-frame">
-    <div class="status-bar light">
-      <span class="status-time">9:41</span>
-      <div class="status-icons">
-        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-        <div class="battery"><div class="battery-fill"></div></div>
-      </div>
-    </div>
-    <div class="screen-content">
-      <div class="onboarding-header">
-        <button class="btn-back" id="ob10-back" aria-label="Go back">&#8249;</button>
-      </div>
-      <h1 class="screen-title">Add your<br/>photos</h1>
-      <p class="screen-subtitle">Show the real you. Profiles with photos get 3x more matches.</p>
-      <div class="photo-upload-main mt-20" id="photo-upload-main" role="button" tabindex="0" aria-label="Upload main photo">
-        <div class="upload-icon-circle">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <polyline points="17 8 12 3 7 8"/>
-            <line x1="12" y1="3" x2="12" y2="15"/>
-          </svg>
-        </div>
-        <span class="upload-main-label">Tap to upload main photo</span>
-      </div>
-      <div class="photo-slots">
-        <div class="photo-slot" id="photo-slot-1" role="button" tabindex="0" aria-label="Photo slot 2">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </div>
-        <div class="photo-slot" id="photo-slot-2" role="button" tabindex="0" aria-label="Photo slot 3">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </div>
-        <div class="photo-slot" id="photo-slot-3" role="button" tabindex="0" aria-label="Photo slot 4">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </div>
-        <div class="photo-slot" id="photo-slot-4" role="button" tabindex="0" aria-label="Photo slot 5">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </div>
-        <div class="photo-slot" id="photo-slot-5" role="button" tabindex="0" aria-label="Photo slot 6">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </div>
-        <div class="photo-slot" id="photo-slot-6" role="button" tabindex="0" aria-label="Photo slot 7">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+  <div class="phone-wrapper" id="screen-onboarding-10">
+    <div class="phone-label">Onboarding 10 – Photo Upload</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
+          </div>
         </div>
       </div>
-      <p class="upload-hint">Add at least 2 photos. Clear face photos work best.</p>
-      <div class="mt-auto"></div>
-    </div>
-    <div class="bottom-cta">
-      <button class="btn-primary" id="ob10-continue">Continue</button>
-    </div>
+      <div class="screen-content">
+        <div class="onboarding-header">
+          <button class="btn-back" id="ob10-back" aria-label="Go back">&#8249;</button>
+        </div>
+        <h1 class="screen-title">Add your<br />photos</h1>
+        <p class="screen-subtitle">Show the real you. Profiles with photos get 3x more matches.</p>
+        <div class="photo-upload-main mt-20" id="photo-upload-main" role="button" tabindex="0"
+          aria-label="Upload main photo">
+          <div class="upload-icon-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="17 8 12 3 7 8" />
+              <line x1="12" y1="3" x2="12" y2="15" />
+            </svg>
+          </div>
+          <span class="upload-main-label">Tap to upload main photo</span>
+        </div>
+        <div class="photo-slots">
+          <div class="photo-slot" id="photo-slot-1" role="button" tabindex="0" aria-label="Photo slot 2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </div>
+          <div class="photo-slot" id="photo-slot-2" role="button" tabindex="0" aria-label="Photo slot 3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </div>
+          <div class="photo-slot" id="photo-slot-3" role="button" tabindex="0" aria-label="Photo slot 4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </div>
+          <div class="photo-slot" id="photo-slot-4" role="button" tabindex="0" aria-label="Photo slot 5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </div>
+          <div class="photo-slot" id="photo-slot-5" role="button" tabindex="0" aria-label="Photo slot 6">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </div>
+          <div class="photo-slot" id="photo-slot-6" role="button" tabindex="0" aria-label="Photo slot 7">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </div>
+        </div>
+        <p class="upload-hint">Add at least 2 photos. Clear face photos work best.</p>
+        <div class="mt-auto"></div>
+      </div>
+      <div class="bottom-cta">
+        <button class="btn-primary" id="ob10-continue">Continue</button>
+      </div>
 
+    </div>
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      ONBOARDING FINAL – You're all set!
      ============================================================ -->
-<div class="phone-wrapper" id="screen-onboarding-final">
-  <div class="phone-label">Onboarding Final – Success</div>
-  <div class="phone-frame">
-    <div class="status-bar light">
-      <span class="status-time">9:41</span>
-      <div class="status-icons">
-        <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
-        <div class="battery"><div class="battery-fill"></div></div>
+  <div class="phone-wrapper" id="screen-onboarding-final">
+    <div class="phone-label">Onboarding Final – Success</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="screen-content" style="align-items:center;justify-content:center;text-align:center;gap:20px;">
-      <div class="success-check-wrapper" id="success-check">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"/>
-        </svg>
+      <div class="screen-content" style="align-items:center;justify-content:center;text-align:center;gap:20px;">
+        <div class="success-check-wrapper" id="success-check">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
+        <h1 class="success-title mt-8">You're all set!</h1>
+        <p class="success-desc">Your profile is ready. Start discovering real connections on your campus.</p>
+        <div style="height:32px;"></div>
+        <button class="btn-primary" id="success-cta" style="width:100%;max-width:300px;">Start Exploring</button>
       </div>
-      <h1 class="success-title mt-8">You're all set!</h1>
-      <p class="success-desc">Your profile is ready. Start discovering real connections on your campus.</p>
-      <div style="height:32px;"></div>
-      <button class="btn-primary" id="success-cta" style="width:100%;max-width:300px;">Start Exploring</button>
-    </div>
 
+    </div>
   </div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
+     DISCOVER SCREEN
+     ============================================================ -->
+  <div class="phone-wrapper discover-phone" id="screen-discover">
+    <div class="phone-label">Discover Screen</div>
+    <div class="phone-frame">
+      <div class="status-bar light">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
+          <div class="battery">
+            <div class="battery-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="screen-content">
+        <div class="discover-header">
+          <h1 class="discover-title">Discover</h1>
+          <button class="discover-settings-btn" aria-label="Settings">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+              </path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="card-stack" id="discover-card-stack">
+          <!-- Cards injected via JS -->
+        </div>
+        <div class="empty-state" id="discover-empty-state" style="display: none;">
+          <div class="empty-state-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3 class="empty-state-title">No more profiles nearby.</h3>
+          <p class="empty-state-text">Check back later or adjust your preferences.</p>
+          <button class="btn-primary empty-state-btn" id="btn-refresh-profiles">Refresh Profiles</button>
+        </div>
+
+        <div class="swipe-actions">
+          <button class="swipe-btn swipe-btn-secondary swipe-btn-dismiss" id="btn-swipe-dismiss" aria-label="Dismiss">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <button class="swipe-btn swipe-btn-like" id="btn-swipe-like" aria-label="Like">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+              </path>
+            </svg>
+          </button>
+          <button class="swipe-btn swipe-btn-secondary swipe-btn-bookmark" id="btn-swipe-save" aria-label="Save for later">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="app-nav">
+        <button class="app-nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="nav-label">Confessions</span>
+        </button>
+        <button class="app-nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+            </path>
+          </svg>
+          <span class="nav-label">FLAMES</span>
+        </button>
+        <button class="app-nav-item active">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+          <span class="nav-label">Discover</span>
+        </button>
+        <button class="app-nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="nav-label">Profile</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     MATCH MODAL
+     ============================================================ -->
+  <div class="phone-wrapper" id="screen-match" style="display: none;">
+    <div class="phone-label">Match Modal</div>
+    <div class="phone-frame" style="background: #0E1C1A;">
+      <div class="match-overlay visible">
+        <div class="match-photos">
+          <img class="match-photo" src="my-profile.jpg" alt="User" />
+          <img class="match-photo" src="profile-maya.png" alt="Maya" />
+          <div class="match-heart-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="match-subtitle">IT'S A MATCH</div>
+        <h2 class="match-title">You and Maya<br />liked each other.</h2>
+        <p class="match-desc">Both of you are on the same campus.<br />Say something real.</p>
+
+        <div class="match-actions">
+          <button class="btn-match-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            Say hello to Maya
+          </button>
+          <button class="btn-match-secondary">
+            Keep swiping
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
      JAVASCRIPT – Interaction Logic
      ============================================================ -->
-<script>
-  /* ---- Toggle Continue button enabled/disabled state ---- */
-  function toggleContinue(btnId, isEnabled) {
-    var btn = document.getElementById(btnId);
-    if (!btn) return;
-    if (isEnabled) {
-      btn.disabled = false;
-      btn.classList.remove('disabled');
-    } else {
-      btn.disabled = true;
-      btn.classList.add('disabled');
+  <script>
+    /* ---- Toggle Continue button enabled/disabled state ---- */
+    function toggleContinue(btnId, isEnabled) {
+      var btn = document.getElementById(btnId);
+      if (!btn) return;
+      if (isEnabled) {
+        btn.disabled = false;
+        btn.classList.remove('disabled');
+      } else {
+        btn.disabled = true;
+        btn.classList.add('disabled');
+      }
     }
-  }
 
-  /* ---- Option Card Selection (single-select per group) ---- */
-  function selectOption(el, group, continueId) {
-    document.querySelectorAll('[id^="' + group + '-"]').forEach(function(c) {
-      c.classList.remove('selected');
-      c.setAttribute('aria-pressed', 'false');
-    });
-    el.classList.add('selected');
-    el.setAttribute('aria-pressed', 'true');
-    if (continueId) toggleContinue(continueId, true);
-  }
+    /* ---- Option Card Selection (single-select per group) ---- */
+    function selectOption(el, group, continueId) {
+      document.querySelectorAll('[id^="' + group + '-"]').forEach(function (c) {
+        c.classList.remove('selected');
+        c.setAttribute('aria-pressed', 'false');
+      });
+      el.classList.add('selected');
+      el.setAttribute('aria-pressed', 'true');
+      if (continueId) toggleContinue(continueId, true);
+    }
 
-  /* ---- University Selection ---- */
-  function selectUniversity(el, continueId) {
-    document.querySelectorAll('.university-item').forEach(function(i) {
-      i.classList.remove('selected');
-      i.setAttribute('aria-selected', 'false');
-    });
-    el.classList.add('selected');
-    el.setAttribute('aria-selected', 'true');
-    if (continueId) toggleContinue(continueId, true);
-  }
+    /* ---- University Selection ---- */
+    function selectUniversity(el, continueId) {
+      document.querySelectorAll('.university-item').forEach(function (i) {
+        i.classList.remove('selected');
+        i.setAttribute('aria-selected', 'false');
+      });
+      el.classList.add('selected');
+      el.setAttribute('aria-selected', 'true');
+      if (continueId) toggleContinue(continueId, true);
+    }
 
-  /* ---- Age Selector ---- */
-  var ageEl  = document.getElementById('age-display');
-  var btnMin = document.getElementById('btn-age-minus');
-  var btnPls = document.getElementById('btn-age-plus');
-  var age    = 21;
-  var MIN_AGE = 18;
-  var MAX_AGE = 80;
+    /* ---- Age Selector ---- */
+    var ageEl = document.getElementById('age-display');
+    var btnMin = document.getElementById('btn-age-minus');
+    var btnPls = document.getElementById('btn-age-plus');
+    var age = 21;
+    var MIN_AGE = 18;
+    var MAX_AGE = 80;
 
-  function updateAge() {
-    if (!ageEl) return;
-    ageEl.textContent = age;
+    function updateAge() {
+      if (!ageEl) return;
+      ageEl.textContent = age;
+      if (btnMin) {
+        btnMin.style.opacity = age <= MIN_AGE ? '0.38' : '1';
+        btnMin.disabled = age <= MIN_AGE;
+      }
+      if (btnPls) {
+        btnPls.style.opacity = age >= MAX_AGE ? '0.38' : '1';
+        btnPls.disabled = age >= MAX_AGE;
+      }
+    }
+
     if (btnMin) {
-      btnMin.style.opacity = age <= MIN_AGE ? '0.38' : '1';
-      btnMin.disabled = age <= MIN_AGE;
+      btnMin.addEventListener('click', function () {
+        if (age > MIN_AGE) { age--; updateAge(); }
+      });
     }
     if (btnPls) {
-      btnPls.style.opacity = age >= MAX_AGE ? '0.38' : '1';
-      btnPls.disabled = age >= MAX_AGE;
+      btnPls.addEventListener('click', function () {
+        if (age < MAX_AGE) { age++; updateAge(); }
+      });
     }
-  }
+    updateAge();
 
-  if (btnMin) {
-    btnMin.addEventListener('click', function() {
-      if (age > MIN_AGE) { age--; updateAge(); }
-    });
-  }
-  if (btnPls) {
-    btnPls.addEventListener('click', function() {
-      if (age < MAX_AGE) { age++; updateAge(); }
-    });
-  }
-  updateAge();
+    /* ---- Name screen: init button state (has pre-filled value) ---- */
+    (function () {
+      var nameInput = document.getElementById('input-firstname');
+      if (nameInput) {
+        toggleContinue('ob01-continue', nameInput.value.trim().length > 0);
+      }
+    })();
 
-  /* ---- Name screen: init button state (has pre-filled value) ---- */
-  (function() {
-    var nameInput = document.getElementById('input-firstname');
-    if (nameInput) {
-      toggleContinue('ob01-continue', nameInput.value.trim().length > 0);
+    /* ============================================================
+       PHASE 2.1 – DISCOVER INTERACTION DEMO
+       ============================================================ */
+
+    const DEMO_PROFILES = [
+      { id: 'maya', name: 'Maya', age: 21, distance: '0.3 mi away', course: 'Psychology', year: 'Junior', prompt: 'The way to my heart is', answer: 'Recommending a book and actually meaning it.', interests: ['Photography', 'Hiking', 'Jazz', 'Film'], image: 'profile-maya.png' },
+      { id: 'whiskey', name: 'Whiskey', age: 20, distance: '1.2 mi away', course: 'Computer Science', year: 'Sophomore', prompt: 'My most irrational fear', answer: 'Squirrels organizing a coordinated attack.', interests: ['Coding', 'Coffee', 'Gaming'], image: 'profile-whisky.jpg' },
+      { id: 'debbie', name: 'Debbie', age: 22, distance: '0.8 mi away', course: 'Business Admin', year: 'Senior', prompt: 'I go crazy for', answer: 'Late night drive-thru runs.', interests: ['Traveling', 'Foodie', 'Fashion'], image: 'profile-debian.jpg' },
+      { id: 'charlie', name: 'Charlie', age: 23, distance: '2.5 mi away', course: 'Mechanical Eng', year: 'Grad Student', prompt: 'A random fact I love is', answer: 'Wombat poop is cube-shaped.', interests: ['Outdoors', 'Reading', 'DIY'], image: 'profile-montana.jpg' }
+    ];
+
+    let currentProfiles = [...DEMO_PROFILES];
+    const stackContainer = document.getElementById('discover-card-stack');
+    const emptyState = document.getElementById('discover-empty-state');
+    
+    function renderStack() {
+      if (!stackContainer) return;
+      stackContainer.innerHTML = '';
+      if (currentProfiles.length === 0) {
+        stackContainer.style.display = 'none';
+        emptyState.style.display = 'flex';
+        return;
+      }
+      stackContainer.style.display = 'block';
+      emptyState.style.display = 'none';
+
+      for (let i = currentProfiles.length - 1; i >= 0; i--) {
+        const profile = currentProfiles[i];
+        const card = document.createElement('div');
+        card.className = 'profile-card';
+        card.dataset.id = profile.id;
+
+        const isTop = (i === 0);
+        if (!isTop) {
+          card.style.transform = `scale(${1 - (i * 0.05)}) translateY(${i * 12}px)`;
+          card.style.opacity = 1 - (i * 0.1);
+        }
+
+        const interestsHTML = profile.interests.map((interest, idx) => {
+          const icon = idx < 2 ? `<svg class="interest-chip-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.132 5.86 3.14 8.868 9 9-5.86.133-8.868 3.14-9 9-.133-5.86-3.14-8.868-9-9 5.86-.133 8.868-3.14 9-9z"></path></svg>` : '';
+          return `<div class="interest-chip">${icon}${interest}</div>`;
+        }).join('');
+
+        card.innerHTML = `
+          <img class="profile-card-image" src="${profile.image}" alt="${profile.name}" onerror="this.src='my-profile.jpg'"/>
+          <div class="profile-card-overlay"></div>
+          <div class="profile-card-body">
+            <div class="distance-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              ${profile.distance}
+            </div>
+            <div class="profile-user-info">
+              <div class="profile-name-row"><span class="profile-name">${profile.name}</span><span class="profile-age">${profile.age}</span></div>
+              <div class="profile-details">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                ${profile.course} <span class="profile-details-sep"></span> ${profile.year}
+              </div>
+            </div>
+            <div class="profile-prompt">
+              <div class="profile-prompt-label">${profile.prompt}</div>
+              <div class="profile-prompt-answer">${profile.answer}</div>
+            </div>
+            <div class="profile-interests">${interestsHTML}</div>
+          </div>
+        `;
+        stackContainer.appendChild(card);
+      }
+      initSwipe();
     }
-  })();
-</script>
+
+    let isDragging = false, startX = 0, startY = 0, currentX = 0, currentY = 0, topCard = null;
+
+    function initSwipe() {
+      const cards = stackContainer.querySelectorAll('.profile-card');
+      if (cards.length === 0) return;
+      topCard = cards[cards.length - 1];
+
+      topCard.addEventListener('touchstart', onDragStart, {passive: true});
+      document.addEventListener('touchmove', onDragMove, {passive: false});
+      document.addEventListener('touchend', onDragEnd);
+      topCard.addEventListener('mousedown', onDragStart);
+      document.addEventListener('mousemove', onDragMove);
+      document.addEventListener('mouseup', onDragEnd);
+    }
+
+    function onDragStart(e) {
+      if (!topCard || e.target.closest('.swipe-actions')) return;
+      isDragging = true;
+      topCard.classList.add('dragging');
+      startX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
+      startY = e.type.includes('mouse') ? e.pageY : e.touches[0].pageY;
+      currentX = 0; currentY = 0;
+    }
+
+    function onDragMove(e) {
+      if (!isDragging || !topCard) return;
+      const x = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
+      const y = e.type.includes('mouse') ? e.pageY : e.touches[0].pageY;
+      currentX = x - startX; currentY = y - startY;
+      const rotate = currentX * 0.05;
+      topCard.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${rotate}deg)`;
+    }
+
+    function onDragEnd(e) {
+      if (!isDragging || !topCard) return;
+      isDragging = false;
+      topCard.classList.remove('dragging');
+      const threshold = window.innerWidth * 0.25;
+      if (currentX > threshold) swipeOut('right');
+      else if (currentX < -threshold) swipeOut('left');
+      else if (currentY > threshold) swipeOut('down');
+      else topCard.style.transform = `translate(0px, 0px) rotate(0deg)`;
+    }
+
+    function swipeOut(direction) {
+      if (!topCard) return;
+      const card = topCard;
+      topCard = null;
+      const multiplier = window.innerWidth * 1.5;
+      let finalX = 0, finalY = 0, finalRotate = 0;
+
+      if (direction === 'right') { finalX = multiplier; finalRotate = 30; }
+      else if (direction === 'left') { finalX = -multiplier; finalRotate = -30; }
+      else if (direction === 'down') { finalY = multiplier; finalRotate = currentX * 0.05; }
+
+      card.style.transform = `translate(${finalX}px, ${finalY}px) rotate(${finalRotate}deg)`;
+      card.style.opacity = '0';
+      
+      const likedProfileId = card.dataset.id;
+      const wasLiked = (direction === 'right');
+
+      setTimeout(() => {
+        if (stackContainer.contains(card)) stackContainer.removeChild(card);
+        currentProfiles.shift();
+        
+        const cards = stackContainer.querySelectorAll('.profile-card');
+        let index = cards.length - 1;
+        cards.forEach((c) => {
+          if (index === 0) { c.style.transform = `scale(1) translateY(0px)`; c.style.opacity = 1; }
+          else { c.style.transform = `scale(${1 - (index * 0.05)}) translateY(${index * 12}px)`; c.style.opacity = 1 - (index * 0.1); }
+          index--;
+        });
+        
+        initSwipe();
+        if (currentProfiles.length === 0) {
+          stackContainer.style.display = 'none';
+          emptyState.style.display = 'flex';
+        }
+
+        if (wasLiked && likedProfileId === 'maya') showMatchScreen();
+      }, 300);
+    }
+
+    const btnDismiss = document.getElementById('btn-swipe-dismiss');
+    const btnLike = document.getElementById('btn-swipe-like');
+    const btnSave = document.getElementById('btn-swipe-save');
+    const btnRefresh = document.getElementById('btn-refresh-profiles');
+
+    if (btnDismiss) {
+      btnDismiss.addEventListener('click', () => {
+        btnDismiss.classList.add('btn-pulse');
+        setTimeout(() => btnDismiss.classList.remove('btn-pulse'), 400);
+        swipeOut('left');
+      });
+    }
+    if (btnLike) {
+      btnLike.addEventListener('click', () => {
+        btnLike.classList.add('btn-pulse');
+        setTimeout(() => btnLike.classList.remove('btn-pulse'), 400);
+        swipeOut('right');
+      });
+    }
+    if (btnSave) {
+      btnSave.addEventListener('click', () => {
+        btnSave.classList.add('btn-pulse');
+        setTimeout(() => btnSave.classList.remove('btn-pulse'), 400);
+        swipeOut('down');
+      });
+    }
+    if (btnRefresh) {
+      btnRefresh.addEventListener('click', () => {
+        currentProfiles = [...DEMO_PROFILES];
+        renderStack();
+      });
+    }
+
+    const screenMatch = document.getElementById('screen-match');
+    const matchOverlay = document.querySelector('.match-overlay');
+    const matchPrimary = document.querySelector('.btn-match-primary');
+    const matchSecondary = document.querySelector('.btn-match-secondary');
+
+    function showMatchScreen() {
+      if (!screenMatch || !matchOverlay) return;
+      screenMatch.style.display = 'flex';
+      requestAnimationFrame(() => matchOverlay.classList.add('visible'));
+    }
+
+    function hideMatchScreen() {
+      if (!screenMatch || !matchOverlay) return;
+      matchOverlay.classList.remove('visible');
+      setTimeout(() => { screenMatch.style.display = 'none'; }, 400);
+    }
+
+    if (matchPrimary) matchPrimary.addEventListener('click', () => alert("Messages feature will be implemented in a future phase."));
+    if (matchSecondary) matchSecondary.addEventListener('click', () => hideMatchScreen());
+
+    renderStack();
+  </script>
 </body>
+
 </html>
