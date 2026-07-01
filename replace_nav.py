@@ -16,7 +16,7 @@ def get_nav_html(active_tab, is_disabled=False):
           <div class="nav-active-indicator"></div>
         </button>
         
-        <button class="app-nav-item{' active' if active_tab == 'confessions' else ''}" onclick="alert('Confessions coming soon')">
+        <button class="app-nav-item{' active' if active_tab == 'confessions' else ''}" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-confessions').style.display='flex';">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
           </svg>
@@ -24,17 +24,7 @@ def get_nav_html(active_tab, is_disabled=False):
           <div class="nav-active-indicator"></div>
         </button>
 
-        <div class="app-nav-item app-nav-center{' active' if active_tab == 'flames' else ''}">
-          <button class="nav-center-circle" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-flames').style.display='flex';">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
-            </svg>
-          </button>
-          <span class="nav-label">FLAMES</span>
-          <div class="nav-active-indicator"></div>
-        </div>
-
-        <button class="app-nav-item{' active' if active_tab == 'messages' else ''}" onclick="alert('Messages coming soon')">
+        <button class="app-nav-item{' active' if active_tab == 'messages' else ''}" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-messages').style.display='flex';">
           <div class="nav-notification-dot"></div>
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -44,7 +34,7 @@ def get_nav_html(active_tab, is_disabled=False):
           <div class="nav-active-indicator"></div>
         </button>
 
-        <button class="app-nav-item{' active' if active_tab == 'profile' else ''}" onclick="alert('Profile coming soon')">
+        <button class="app-nav-item{' active' if active_tab == 'profile' else ''}" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-profile').style.display='flex';">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -67,6 +57,12 @@ def replacer(match):
     active = "discover"
     if "flames" in screen_id:
         active = "flames"
+    elif "confessions" in screen_id:
+        active = "confessions"
+    elif "messages" in screen_id:
+        active = "messages"
+    elif "profile" in screen_id:
+        active = "profile"
         
     return get_nav_html(active, is_disabled)
 
