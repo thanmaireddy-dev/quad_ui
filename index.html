@@ -823,7 +823,7 @@
           <div class="nav-active-indicator"></div>
         </button>
 
-        <button class="app-nav-item" onclick="alert('Profile coming soon')">
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-profile').style.display='flex';">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -953,7 +953,7 @@
           <div class="nav-active-indicator"></div>
         </button>
 
-        <button class="app-nav-item" onclick="alert('Profile coming soon')">
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-profile').style.display='flex';">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -1019,7 +1019,7 @@
           <div class="nav-active-indicator"></div>
         </button>
 
-        <button class="app-nav-item" onclick="alert('Profile coming soon')">
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-profile').style.display='flex';">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -1114,7 +1114,7 @@
           <div class="nav-active-indicator"></div>
         </button>
 
-        <button class="app-nav-item" onclick="alert('Profile coming soon')">
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-profile').style.display='flex';">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -1331,7 +1331,7 @@
           <div class="nav-active-indicator"></div>
         </button>
 
-        <button class="app-nav-item" onclick="alert('Profile coming soon')">
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-profile').style.display='flex';">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -1570,7 +1570,7 @@
           <div class="nav-active-indicator"></div>
         </button>
 
-        <button class="app-nav-item" onclick="alert('Profile coming soon')">
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-profile').style.display='flex';">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -1859,7 +1859,41 @@
       </div>
 
       <div class="app-nav">
-        <!-- Will be replaced by replace_nav.py -->
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-discover').style.display='flex';">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+          <span class="nav-label">Discover</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+        
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-confessions').style.display='flex';">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="nav-label">Confessions</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+
+        <button class="app-nav-item" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-messages').style.display='flex';">
+          <div class="nav-notification-dot"></div>
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span class="nav-label">Messages</span>
+          <div class="nav-active-indicator"></div>
+        </button>
+
+        <button class="app-nav-item active" onclick="document.querySelectorAll('.phone-wrapper').forEach(w => w.style.display='none'); document.getElementById('screen-profile').style.display='flex';">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="nav-label">Profile</span>
+          <div class="nav-active-indicator"></div>
+        </button>
       </div>
     </div>
   </div>
@@ -2286,6 +2320,52 @@
       // Update nav active states since FLAMES is not in the nav
       document.querySelectorAll('.app-nav-item').forEach(btn => btn.classList.remove('active'));
     }
+
+    /* ---- PROFILE COMPLETION RING ANIMATION ---- */
+    /* Animate the ring when the profile screen becomes visible */
+    const PROFILE_COMPLETION = 84; // percentage
+    const profileRingFill = document.getElementById('profile-ring-fill');
+    const profilePctText = document.getElementById('profile-pct-text');
+    let profileAnimated = false;
+
+    function animateProfileRing() {
+      if (profileAnimated || !profileRingFill) return;
+      profileAnimated = true;
+      const circumference = 339.29; // 2 * PI * 54
+      const offset = circumference - (circumference * PROFILE_COMPLETION / 100);
+      profileRingFill.style.strokeDashoffset = offset;
+
+      // Count up the percentage text
+      let current = 0;
+      const step = PROFILE_COMPLETION / (2000 / 20);
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= PROFILE_COMPLETION) {
+          current = PROFILE_COMPLETION;
+          clearInterval(timer);
+        }
+        if (profilePctText) profilePctText.innerText = Math.round(current) + '%';
+      }, 20);
+    }
+
+    // Watch for profile screen becoming visible
+    const profileScreen = document.getElementById('screen-profile');
+    if (profileScreen) {
+      const observer = new MutationObserver(() => {
+        if (profileScreen.style.display !== 'none') {
+          setTimeout(animateProfileRing, 200);
+        }
+      });
+      observer.observe(profileScreen, { attributes: true, attributeFilter: ['style'] });
+    }
+
+    /* ---- CONFESSIONS FILTER TABS ---- */
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
   </script>
 </body>
 
